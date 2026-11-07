@@ -7,6 +7,13 @@
 </head>
 <body>
     <script>
+        console.log(`Computer choice: ${getComputerChoice()}`);
+        console.log(`Computer choice: ${getComputerChoice()}`);
+        console.log(`Computer choice: ${getComputerChoice()}`);
+        console.log(`Computer choice: ${getComputerChoice()}`);
+        console.log(`Computer choice: ${getComputerChoice()}`);
+
+
         function getComputerChoice(){
             /*
             Choice Variable:
@@ -21,6 +28,19 @@
 
             return one of the above as string
             */
+           let choice = Math.round((Math.random() * 10)) % 3;
+           console.log(`Random value generated: ${choice}`);
+
+           switch(choice) {
+            case 0: 
+                return "rock";
+            case 1: 
+                return "paper";
+            case 2:
+                return "scissors";
+           }
+
+           return "";
         }
     </script>
 </body>
