@@ -48,11 +48,22 @@
             prompt for a user's input
             return that input
             */
-           return prompt("Rock, paper, or scissors?");
+           let i = 0;
+           let answer;
+           while(i === 0)
+           {
+            answer = prompt("Rock, paper, or scissors?").toLowerCase();
+            if (answer === "rock" || answer === "paper" || answer === "scissors"){
+                i++;
+            } else {
+                console.log(`Sorry, I don't know what "${answer}" is!`);
+            }
+           }
+           return answer;
         }
 
         function playRound(){
-            let humanSelection = getHumanChoice().toLowerCase();
+            let humanSelection = getHumanChoice();
             let computerSelection = getComputerChoice();
             if (humanSelection === computerSelection){
                 console.log(`Tie! You both picked ${humanSelection}!`);
